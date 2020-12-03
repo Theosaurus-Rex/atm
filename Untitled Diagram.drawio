@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-12-03T23:36:20.823Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="ekYoSFQSzlNnBJIEDJNV" version="13.10.8" type="github">
+<mxfile host="app.diagrams.net" modified="2020-12-03T23:39:36.039Z" agent="5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36" etag="SghwgeKy1x34jxtAs-G9" version="13.10.8" type="github">
   <diagram id="HpTrLbnlSJHPlYKzerR4" name="Page-1">
-    <mxGraphModel dx="946" dy="623" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1113" dy="733" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -95,6 +95,9 @@
         <mxCell id="xloOihyxUb7RViInRWzp-11" value="Ask user how much they want to withdraw, get amount" style="whiteSpace=wrap;html=1;rounded=1;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="1">
           <mxGeometry x="354" y="420" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="xloOihyxUb7RViInRWzp-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="xloOihyxUb7RViInRWzp-14" target="xloOihyxUb7RViInRWzp-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="xloOihyxUb7RViInRWzp-14" value="Ask user how much to deposit, get amount" style="whiteSpace=wrap;html=1;rounded=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
           <mxGeometry x="514" y="290" width="120" height="60" as="geometry" />
         </mxCell>
@@ -155,6 +158,38 @@
         </mxCell>
         <mxCell id="xloOihyxUb7RViInRWzp-34" value="Input &amp;lt; balance?" style="rhombus;whiteSpace=wrap;html=1;rounded=1;strokeColor=#b85450;fillColor=#f8cecc;" vertex="1" parent="1">
           <mxGeometry x="373" y="620" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xloOihyxUb7RViInRWzp-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="xloOihyxUb7RViInRWzp-41" target="xloOihyxUb7RViInRWzp-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xloOihyxUb7RViInRWzp-45" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="xloOihyxUb7RViInRWzp-44">
+          <mxGeometry x="-0.1621" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xloOihyxUb7RViInRWzp-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="xloOihyxUb7RViInRWzp-41" target="xloOihyxUb7RViInRWzp-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xloOihyxUb7RViInRWzp-41" value="Amount is a positive number?" style="rhombus;whiteSpace=wrap;html=1;rounded=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="660" y="280" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="xloOihyxUb7RViInRWzp-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="xloOihyxUb7RViInRWzp-43" target="xloOihyxUb7RViInRWzp-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="10" />
+              <mxPoint x="320" y="10" />
+              <mxPoint x="320" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xloOihyxUb7RViInRWzp-43" value="Deposit amount, print new balance" style="whiteSpace=wrap;html=1;rounded=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="640" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xloOihyxUb7RViInRWzp-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="xloOihyxUb7RViInRWzp-47" target="xloOihyxUb7RViInRWzp-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xloOihyxUb7RViInRWzp-47" value="Print error" style="whiteSpace=wrap;html=1;rounded=1;strokeColor=#82b366;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="640" y="450" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
