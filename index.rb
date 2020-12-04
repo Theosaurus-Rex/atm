@@ -1,6 +1,8 @@
 #Welcome Message
 require './validators'
 
+balance = File.read('balance.txt')
+
 def welcome_and_input
     system("clear")
     puts "Welcome to your friendly neighborhood ATM!"
@@ -21,7 +23,7 @@ def welcome_and_input
         when 1
             show_balance()
         when 2
-    #Make a Withdrawal
+            withdraw_money()
         when 3
     #Make a Deposit
         when 4
@@ -30,7 +32,30 @@ def welcome_and_input
 end
 
 def show_balance
-
+    balance = File.read('balance.txt')
+    puts "Your current balance is $#{balance}"
+    puts "Press any key to continue"
+    gets
+    welcome_and_input()
 end 
 
+def withdraw_money
+    balance = File.read('balance.txt').to_i
+    puts "How much would you like to withdraw?"
+    amount = gets.to_i
+        if amount == 0
+            puts "Error! Invalid value entered"
+            withdraw_money
+        elsif amount > balance
+            puts "Error! You do not have the required funds"
+            withdraw_money
+        else 
+            balance -= amount
+            File.write('balance.txt', "#{balance}")
+            puts "Your new balance is $#{balance}"
+            puts "Press any key to continue"
+            gets
+            welcome_and_input()
+        end
+end
 welcome_and_input()
