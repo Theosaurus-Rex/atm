@@ -25,7 +25,7 @@ def welcome_and_input
         when 2
             withdraw_money()
         when 3
-    #Make a Deposit
+            deposit_money()
         when 4
             puts "See you next time!"
     end
@@ -51,6 +51,23 @@ def withdraw_money
             withdraw_money
         else 
             balance -= amount
+            File.write('balance.txt', "#{balance}")
+            puts "Your new balance is $#{balance}"
+            puts "Press any key to continue"
+            gets
+            welcome_and_input()
+        end
+end
+
+def deposit_money
+    balance = File.read('balance.txt').to_i
+    puts "How much would you like to deposit?"
+    amount = gets.to_i
+        if amount == 0
+            puts "Error! Invalid value entered"
+            deposit_money
+        else 
+            balance += amount
             File.write('balance.txt', "#{balance}")
             puts "Your new balance is $#{balance}"
             puts "Press any key to continue"
