@@ -7,6 +7,16 @@ balance = File.read('balance.txt')
 
 #Clear Screen
 system("clear")
+
+puts "ARGV:"
+p ARGV
+if ARGV.length > 0
+    puts "we have command line arguments"
+end
+if ARGV[0] == '-h' || ARGV[0] == '--help'
+    puts "you asked for help"
+end 
+
 $atm_view = AtmView.new
 
 #Message on startup
