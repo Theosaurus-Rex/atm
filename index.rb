@@ -11,7 +11,6 @@ $atm_view = AtmView.new
 
 #Message on startup
 def welcome_and_input()
-    #todo - separate welcome messages for unit testing
     puts "\nWelcome to your friendly neighborhood ATM!"
     $atm_view.show_options
     input = gets.chomp
@@ -73,6 +72,11 @@ def deposit_money
     balance = File.read('balance.txt').to_i
     puts "How much would you like to deposit?"
     amount = gets.to_i
+    input_valid = Validators.validate_input(amount)
+        if !input_valid
+            puts 'Error! Value must be a positive number'
+            deposit_money
+        end
         if amount == 0
             puts "Error! Invalid value entered"
             deposit_money
