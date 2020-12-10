@@ -1,16 +1,19 @@
 #Welcome Message
 require './validators'
+require './atm_view'
 
+# Balance Storage File
 balance = File.read('balance.txt')
 
-def welcome_and_input
-    system("clear")
-    puts "Welcome to your friendly neighborhood ATM!"
-    puts "Please select from the following options:"
-    puts "   1. Display Balance"
-    puts "   2. Make a withdrawal"
-    puts "   3. Make a deposit"
-    puts "   4. Exit"
+#Clear Screen
+system("clear")
+$atm_view = AtmView.new
+
+#Message on startup
+def welcome_and_input()
+    #todo - separate welcome messages for unit testing
+    puts "\nWelcome to your friendly neighborhood ATM!"
+    $atm_view.show_options
     input = gets.chomp
     input_valid = Validators.validate_input(input)
     if !input_valid
@@ -19,6 +22,7 @@ def welcome_and_input
         gets
         welcome_and_input()
     end
+    #Selection criteria
     case input.to_i
         when 1
             show_balance()
@@ -28,6 +32,7 @@ def welcome_and_input
             deposit_money()
         when 4
             puts "See you next time!"
+            exit(0)
     end
 end
 
