@@ -48,6 +48,11 @@ def withdraw_money
     balance = File.read('balance.txt').to_i
     puts "How much would you like to withdraw?"
     amount = gets.to_i
+    valid = Validators.validate_withdrawal(amount)
+        if !valid
+            puts "Error! Invalid value, please enter a positive number."
+            withdraw_money
+        end
         if amount == 0
             puts "Error! Invalid value entered"
             withdraw_money

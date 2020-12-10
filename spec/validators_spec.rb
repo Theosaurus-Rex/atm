@@ -13,3 +13,10 @@ describe 'validate input' do
         expect(Validators.validate_input("dog")).to eq(false)
     end
 end
+
+describe "validate withdrawal" do
+    it 'is a positive integer' do
+        expect(Validators.validate_withdrawal("100")).to eq(true)
+        expect(Validators.validate_withdrawal("-100")).to eq(false)
+    end
+end
