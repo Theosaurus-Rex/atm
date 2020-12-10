@@ -7,6 +7,9 @@ balance = File.read('balance.txt')
 
 #Clear Screen
 system("clear")
+
+
+
 $atm_view = AtmView.new
 
 #Message on startup
